@@ -41,9 +41,14 @@ def longestSubarrayWithSameValue(mylist):
     left = 0
     size = 0 # window size
     for right in range(len(mylist)):
+        # for first iteration , this will be false.
+        # hence it will go directly to calculate the window size
+        # from second iteration, if the adjacent numbers match, it will continue increasing the windo
+        # That happens here by calculating the max window size
         if mylist[right] != mylist[left]:
             left = right
-            size = max(size,right - left + 1)
+        size = max(size,right - left + 1)
+    return size
 
 
 
@@ -57,7 +62,8 @@ if __name__ == '__main__':
     # print(closeDuplicates(mylist,window_size))
 
     # This is for questions where we need to find out the longest subarray with same value at each position :
-
+    mylist = [ 4,2,3,7,3,8]
+    print(longestSubarrayWithSameValue(mylist))
     # This is for questions where we need to find out the longest subarray without same value at each position :
 
     # This is for questions where we need to find out the longest substring without repeating characters
