@@ -10,6 +10,7 @@ class Solution2:
     def isValid(self, s: str) -> bool:
         # s = "([{(}])"
         stack = []
+        print('you are here')
         bracket_dict = {
                         ')' : '(',
                         '}' : '{',
