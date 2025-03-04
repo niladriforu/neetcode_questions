@@ -1,8 +1,8 @@
 def closeDupplicatesBruteForce(mylist, size):
     '''
     This function takes a list and a window size and checks if there are any duplicates in the window
-    This can be also adjacent two numbers in the list that are equal #for right in range(left+1, min(len(mylist),left+size))
-    this can be also two alternate numbers in the list that are equal #for right in range(left+2, min(len(mylist),left+size+1))
+    Alternatively,this can be also adjacent two numbers in the list that are equal #for right in range(left+1, min(len(mylist),left+size))
+    Alternatively,this can be also two alternate numbers in the list that are equal #for right in range(left+2, min(len(mylist),left+size+1))
     :param mylist:
     :param size:
     :return:
@@ -14,7 +14,7 @@ def closeDupplicatesBruteForce(mylist, size):
                 # It actually means that the window is from left to left+size
                 # and we are taking the first element of the window and checking
                 # if the other elements in the window are same.
-                #This also means the mylist[left+size] element is not compared.
+                # This also means the mylist[left+size] element is not compared.
                 # only the elements in the window are compared.
                 print(f'range is  : {left} "::"  {left+size}')
                 print('00000000000')
