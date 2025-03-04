@@ -1,5 +1,6 @@
 class Solution1:
     def isValid(self, s: str) -> bool:
+        print('sample message')
         while '()' in s or '{}' in s or '[]' in s:
             s = s.replace('()','')
             s = s.replace('{}','')
