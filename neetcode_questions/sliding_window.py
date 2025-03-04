@@ -13,8 +13,9 @@ def closeDupplicatesBruteForce(mylist, size):
             for right in range(left+1, min(len(mylist),left+size)) :
                 # It actually means that the window is from left to left+size
                 # and we are taking the first element of the window and checking
-                # if the other elements in the window are same
-                # if len(mylist) >=  left+size:
+                # if the other elements in the window are same.
+                #This also means the mylist[left+size] element is not compared.
+                # only the elements in the window are compared.
                 print(f'range is  : {left} "::"  {left+size}')
                 print('00000000000')
                 if mylist[left] == mylist[right]:
