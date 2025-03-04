@@ -24,8 +24,22 @@ def closeDupplicatesBruteForce(mylist, size):
     return False
 
 
+def closeDuplicates(mylist,size):
+    window = set()
+    left = 0
+    for right in range(len(mylist)):
+        if right - left +1 > size:
+            window.remove(mylist[left])
+            left +=1
+        if mylist[right] in window:
+            return True
+        window.add(mylist[right])
+    return False
+
+
 if __name__ == '__main__':
-    mylist = [ 1,2,2,5,3,5]
+    mylist = [ 1,2,3,5,4,6]
     window_size = 3
-    print(closeDupplicatesBruteForce(mylist,window_size))
+    # print(closeDupplicatesBruteForce(mylist,window_size))
     # closeDupplicatesBruteForce(mylist,window_size)
+    print(closeDuplicates(mylist,window_size))
