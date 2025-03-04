@@ -37,9 +37,36 @@ def closeDuplicates(mylist,size):
     return False
 
 
+def longestSubarrayWithSameValue(mylist):
+    left = 0
+    size = 0 # window size
+    for right in range(len(mylist)):
+        if mylist[right] != mylist[left]:
+            left = right
+            size = max(size,right - left + 1)
+
+
+
+
+
 if __name__ == '__main__':
     mylist = [ 1,2,3,5,4,6]
     window_size = 3
+    # This is for questions where we need to see if there is a duplicate number is a window of N
     # print(closeDupplicatesBruteForce(mylist,window_size))
-    # closeDupplicatesBruteForce(mylist,window_size)
-    print(closeDuplicates(mylist,window_size))
+    # print(closeDuplicates(mylist,window_size))
+
+    # This is for questions where we need to find out the longest subarray with same value at each position :
+
+    # This is for questions where we need to find out the longest subarray without same value at each position :
+
+    # This is for questions where we need to find out the longest substring without repeating characters
+
+    # This is for questions where we need to find out the longest substring with repeating characters
+
+
+    # We have an array and a sliding window defined by a start index and an end index.
+    # The sliding window moves from left of the array to right. There are always k elements in the window.
+    # The window moves one position at a time. Find the maximum integer within the window each time it moves.
+
+
