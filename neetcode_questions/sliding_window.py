@@ -55,9 +55,9 @@ def longestSubarrayWithSameValue(mylist):
 
 
 if __name__ == '__main__':
+    # This is for questions where we need to see if there is a duplicate number in a window of N
     mylist = [ 1,2,3,5,4,6]
     window_size = 3
-    # This is for questions where we need to see if there is a duplicate number is a window of N
     # print(closeDupplicatesBruteForce(mylist,window_size))
     # print(closeDuplicates(mylist,window_size))
 
