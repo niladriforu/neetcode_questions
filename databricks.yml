@@ -1,0 +1,46 @@
+# Databricks Asset Bundle Configuration
+bundle:
+  name: databricks-pyspark-project
+
+# Include configuration files from resources directory
+include:
+  - resources/*.yml
+
+# Workspace configuration
+workspace:
+  root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+
+# Targets for different environments
+targets:
+  development:
+    mode: development
+    default: true
+    workspace:
+      host: https://your-workspace.cloud.databricks.com
+    
+  staging:
+    mode: production
+    workspace:
+      host: https://your-workspace.cloud.databricks.com
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/staging
+    
+  production:
+    mode: production
+    workspace:
+      host: https://your-workspace.cloud.databricks.com
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/production
+    run_as:
+      service_principal_name: ${var.service_principal_id}
+
+# Variables that can be overridden
+variables:
+  catalog:
+    description: Unity Catalog to use
+    default: main
+  
+  schema:
+    description: Schema/Database to use
+    default: default
+  
+  service_principal_id:
+    description: Service Principal ID for production
