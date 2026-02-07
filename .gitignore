@@ -74,6 +74,7 @@ temp/
 # Data files (customize based on your needs)
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/sample_data.csv
 data/processed/*
 !data/processed/.gitkeep
 
